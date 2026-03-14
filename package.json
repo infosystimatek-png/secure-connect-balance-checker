@@ -1,0 +1,24 @@
+{
+  "name": "tron-delegated-game-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "esbuild public/src/app.mjs --bundle --format=esm --outfile=public/app.js --platform=browser --define:global=globalThis",
+    "dev": "node src/index.js",
+    "start": "npm run build && node src/index.js",
+    "vercel-build": "echo API"
+  },
+  "dependencies": {
+    "@tronweb3/walletconnect-tron": "^4.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0",
+    "tronweb": "^6.2.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.27.3"
+  }
+}
